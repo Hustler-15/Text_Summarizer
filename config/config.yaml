@@ -1,0 +1,7 @@
+artifacts_root: artifacts
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_url: https://github.com/Hustler-15/MLops/blob/213b5aece22aab0fd305fbfc36dc0f9372b32c55/samsumdata.zip
+  local_data_file: artifacts/data_ingestion/data.zip
+  unzip_dir: artifacts/data_ingestion
