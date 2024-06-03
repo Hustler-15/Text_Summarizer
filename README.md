@@ -1,4 +1,4 @@
-# End to end Text-Summarizer
+# Text-Summarizer
 
 # Introduction
 It is an end-to-end NLP project based on transformers using the Hugging Face API, where I fine-tuned the "google pegasus-cnn_dailymail" model on the SAMSum dataset to generate concise summaries of dialogues. The project included creating a comprehensive training and prediction pipeline encompassing data ingestion, validation, transformation, and model training, all integrated into a seamless workflow for text summarization. To showcase the model's functionality, I developed a user-friendly application using FastAPI, allowing users to input dialogues and receive summarized outputs. Utilizing GitHub Actions for CI/CD, I deployed the project on AWS Cloud, ensuring continuous integration and delivery.
