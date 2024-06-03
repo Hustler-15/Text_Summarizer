@@ -1,6 +1,9 @@
-# End to end Text-Summarizer-Project
+# End to end Text-Summarizer
 
-## Workflows
+# Introduction
+It is an end-to-end NLP project based on transformers using the Hugging Face API, where I fine-tuned the "google pegasus-cnn_dailymail" model on the SAMSum dataset to generate concise summaries of dialogues. The project included creating a comprehensive training and prediction pipeline encompassing data ingestion, validation, transformation, and model training, all integrated into a seamless workflow for text summarization. To showcase the model's functionality, I developed a user-friendly application using FastAPI, allowing users to input dialogues and receive summarized outputs. Utilizing GitHub Actions for CI/CD, I deployed the project on AWS Cloud, ensuring continuous integration and delivery.
+
+## Workflow for Modular Coding
 
 1. Update config.yaml
 2. Update params.yaml
@@ -15,7 +18,7 @@
 # How to run?
 ### STEPS:
 
-Clone the repository
+First clone the repository
 
 ```bash
 https://github.com/Hustler-15/Text_Summarizer
@@ -23,22 +26,22 @@ https://github.com/Hustler-15/Text_Summarizer
 ### STEP 01- Create a conda environment after opening the repository
 
 ```bash
-conda create -n summary python=3.8 -y
+conda create -n textS python=3.8 -y
 ```
 
 ```bash
-conda activate summary
+conda activate textS
 ```
 
 
-### STEP 02- install the requirements
+### STEP 02- Install the requirements.txt
 ```bash
 pip install -r requirements.txt
 ```
 
 
 ```bash
-# Finally run the following command
+# Run the app.py
 python app.py
 ```
 
@@ -89,7 +92,7 @@ Email: ap644531@gmail.com
 
 	
 ## 3. Create ECR repo to store/save docker image
-    - Save the URI: 566373416292.dkr.ecr.us-east-1.amazonaws.com/text-s
+    - Save the URI: 730335214290.dkr.ecr.eu-north-1.amazonaws.com/text-s
 
 	
 ## 4. Create EC2 machine (Ubuntu) 
@@ -97,13 +100,13 @@ Email: ap644531@gmail.com
 ## 5. Open EC2 and Install docker in EC2 Machine:
 	
 	
-	#optinal
+	#optinal(Update Package Manager)
 
 	sudo apt-get update -y
 
 	sudo apt-get upgrade
 	
-	#required
+	# Install the docker on EC2 Instance
 
 	curl -fsSL https://get.docker.com -o get-docker.sh
 
@@ -125,6 +128,6 @@ Email: ap644531@gmail.com
 
     AWS_REGION = us-east-1
 
-    AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
+    AWS_ECR_LOGIN_URI = demo>> 730335214290.dkr.ecr.eu-north-1.amazonaws.com
 
-    ECR_REPOSITORY_NAME = simple-app
+    ECR_REPOSITORY_NAME = text-s
